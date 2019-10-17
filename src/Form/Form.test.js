@@ -17,7 +17,7 @@ describe('Form', () => {
                     number={mockNumber}
                     addReservation={mockAddReservation} />)
     });
-    
+
     it('should match the snapshot with all of the data passed through', () => {
         expect(wrapper).toMatchSnapshot();
     });
@@ -32,6 +32,10 @@ describe('Form', () => {
         wrapper.find('button').simulate('click');
         expect(wrapper.props().addReservation).toHaveBeenCalled();
     });
+
+    it('should set the state when handleChange is called', () => {
+        wrapper.setState({name: 'Juju', date: '2019/10/13', time: '11:00pm', number: 3});
+    })
 
     it('should reset the state to default settings when clearInputs is called', () => {
         wrapper.instance().clearInputs

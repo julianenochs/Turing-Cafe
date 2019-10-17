@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Reservations should match the snapshot with all of the data passed through 1`] = `undefined`;
+exports[`Reservations should match the snapshot with all of the data passed through 1`] = `
+<section
+  className="reservation__card"
+>
+  <h1>
+    Julian
+  </h1>
+  <p>
+    2019/10/14
+  </p>
+  <p>
+    11:00pm
+     pm
+  </p>
+  <p>
+    Number of guests: 
+    3
+  </p>
+  <button
+    className="cancel-reservation"
+  >
+    Cancel
+  </button>
+</section>
+`;

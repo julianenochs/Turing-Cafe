@@ -4,6 +4,7 @@ import Reservations from './Reservations';
 
 describe('Reservations', () => {
     let wrapper;
+    let mockCancelReservation = jest.fn()
     beforeEach(() => {
         wrapper = shallow(<Reservations 
                     key={3}
@@ -12,14 +13,11 @@ describe('Reservations', () => {
                     date={'2019/10/14'}
                     time={'11:00pm'}
                     number={3}
+                    cancelReservation={mockCancelReservation}
                     />)
     });
 
     it('should match the snapshot with all of the data passed through', () => {
         expect(wrapper).toMatchSnapshot();
-    });
-
-    it('should call cancelReservation when the cancel button is clicked', () => {
-        
     });
 });

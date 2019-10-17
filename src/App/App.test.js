@@ -36,5 +36,4 @@ describe('App', () => {
     expect(window.fetch).toHaveBeenCalledWith('http://localhost:3001/api/v1/reservations');
   });
 
-  
 });

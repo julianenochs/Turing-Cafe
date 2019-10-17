@@ -32,7 +32,7 @@ class App extends Component {
 
   cancelReservation = (id) => {
     const removeReservation = this.state.reservations.filter(reservation => {
-      return reservation.id !== id
+      return reservation.id === id
     })
     const options = {
       method: 'DELETE',
@@ -42,7 +42,7 @@ class App extends Component {
     }
     fetch(`http://localhost:3001/api/v1/reservations/:${id}`, options)
       .then(response => response.json())
-      .then(() => this.setState({ reservations: removeReservation }))
+      // .then(() => this.setState({ reservations: removeReservation }))
   }
   
   render() {
