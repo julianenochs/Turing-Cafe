@@ -10,11 +10,12 @@ class App extends Component {
       reservations: []
     }
   }
-
+  
   componentDidMount() {
     fetch('http://localhost:3001/api/v1/reservations')
-      .then(response => response.json())
-      .then(response => this.setState({reservations: response}))
+    .then(response => response.json())
+    .then(response => this.setState({reservations: response}))
+    // .then(response => console.log('reservation', this.state.reservations))
   }
 
   addReservation = (newReservation) => {
@@ -32,8 +33,9 @@ class App extends Component {
 
   cancelReservation = (id) => {
     const removeReservation = this.state.reservations.filter(reservation => {
-      return reservation.id === id
+      return reservation.id !== id
     })
+    console.log('removedRes', removeReservation)
     const options = {
       method: 'DELETE',
       headers: {
