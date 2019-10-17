@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
 
 class App extends Component {
   constructor() {
@@ -12,7 +13,8 @@ class App extends Component {
   componentDidMount() {
     fetch('http://localhost:3001/api/v1/reservations')
       .then(response => response.json())
-      .then(response => this.setState({ reservations : response}))
+      .then(response => this.setState({ reservations : response }))
+      .then(response => console.log('reservations', this.state.reservations))
   }
   
   render() {
@@ -23,7 +25,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <ReservationsContainer reservations={this.state.reservations}/>
         </div>
       </div>
     )
