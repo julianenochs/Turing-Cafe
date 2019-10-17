@@ -8,7 +8,7 @@ export default class Form extends Component {
             name: '',
             date: '',
             time: '',
-            numberOfGuests: 0
+            number: 0
         }
     }
 
@@ -18,6 +18,17 @@ export default class Form extends Component {
 
     handleChange = (e) => {
         this.setState({ [e.target.name] : e.target.value })
+    }
+
+    submitReservation = (e) => {
+        const { addReservation } = this.props;
+        const newReservation = { ...this.state, id: Date.now() };
+        addReservation(newReservation);
+        this.clearInputs();
+    }
+
+    clearInputs = () => {
+        this.setState({ name: '', date: '', time: '', numberOfGuests: 0 })
     }
 
     render() {
@@ -43,11 +54,11 @@ export default class Form extends Component {
                     placeholder='Time' />
                 <input
                     type='number'
-                    name='numberOfGuests'
+                    name='number'
                     onChange={this.handleChange}
-                    value={this.state.numberOfGuests}
+                    value={this.state.number}
                     placeholder='Number of Guests' />
-                <button>Make Reservation</button>
+                <button onClick={this.submitReservation}>Make Reservation</button>
             </section>
         )
     }

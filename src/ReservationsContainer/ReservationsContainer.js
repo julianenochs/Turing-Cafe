@@ -4,7 +4,7 @@ import Reservations from '../Reservations/Reservations';
 const ReservationsContainer = (props) => {
     const allReservations = props.reservations.map(reservation => {
         return <Reservations 
-            key = {reservation.number}
+            key = {reservation.id}
             id = {reservation.id}
             name = {reservation.name}
             date = {reservation.date}
