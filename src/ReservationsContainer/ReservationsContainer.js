@@ -2,7 +2,7 @@ import React from 'react';
 import Reservations from '../Reservations/Reservations';
 
 const ReservationsContainer = (props) => {
-    props.reservations.map(reservation => {
+    const allReservations = props.reservations.map(reservation => {
         return <Reservations 
             key = {reservation.number}
             id = {reservation.id}
@@ -14,7 +14,7 @@ const ReservationsContainer = (props) => {
     })
     return(
         <section>
-            
+            {allReservations}
         </section>
     )
 }
