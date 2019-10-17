@@ -1,8 +1,9 @@
 import React from 'react';
 import Reservations from '../Reservations/Reservations';
+import './ReservationsContainer.css';
 
-const ReservationsContainer = (props) => {
-    const allReservations = props.reservations.map(reservation => {
+const ReservationsContainer = ({reservations, cancelReservation}) => {
+    const allReservations = reservations.map(reservation => {
         return <Reservations 
             key = {reservation.id}
             id = {reservation.id}
@@ -10,10 +11,11 @@ const ReservationsContainer = (props) => {
             date = {reservation.date}
             time = {reservation.time}
             number = {reservation.number}
+            cancelReservation = {cancelReservation}
         />
     })
     return(
-        <section>
+        <section className='reservation__container'>
             {allReservations}
         </section>
     )

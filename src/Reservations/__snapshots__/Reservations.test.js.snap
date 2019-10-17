@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reservations should match the snapshot with all of the data passed through 1`] = `undefined`;

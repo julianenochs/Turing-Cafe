@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should match the snapshot with all of the data passed through 1`] = `
+<section
+  className="form__section"
+>
+  <input
+    className="form__element"
+    name="name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <input
+    className="form__element"
+    name="date"
+    onChange={[Function]}
+    placeholder="Date"
+    type="date"
+    value=""
+  />
+  <input
+    className="form__element"
+    name="time"
+    onChange={[Function]}
+    placeholder="Time"
+    type="time"
+    value=""
+  />
+  <input
+    className="form__element"
+    name="number"
+    onChange={[Function]}
+    placeholder="Number of Guests"
+    type="number"
+    value={0}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Make Reservation
+  </button>
+</section>
+`;

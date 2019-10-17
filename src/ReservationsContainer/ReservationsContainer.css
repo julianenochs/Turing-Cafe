@@ -1,0 +1,10 @@
+.reservation__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 70vh;
+    margin: 20px;
+    padding: 20px;
+    overflow: scroll;
+    width: 85%;
+}

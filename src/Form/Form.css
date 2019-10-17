@@ -1,0 +1,13 @@
+.form__section {
+    display: flex;
+    font-size: 1.5em;
+}
+
+.form__element {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    font-size: 1em;
+}

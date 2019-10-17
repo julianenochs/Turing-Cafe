@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot with all of the data passed through 1`] = `
+<div
+  className="App"
+>
+  <h1
+    className="app-title"
+  >
+    Turing Cafe Reservations
+  </h1>
+  <div
+    className="resy-form"
+  >
+    <Form
+      addReservation={[Function]}
+    />
+  </div>
+  <div
+    className="resy-container"
+  >
+    <ReservationsContainer
+      reservations={
+        Object {
+          "date": "2019/10/13",
+          "name": "Juju B",
+          "number": 3,
+          "time": "11:00pm",
+        }
+      }
+    />
+  </div>
+</div>
+`;
